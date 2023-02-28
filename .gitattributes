@@ -1,0 +1,13 @@
+# Enforce LF line endings regardless of OS or git configurations.
+# Text file detection algorithm is auto
+* text=auto eol=lf
+
+# Line ending for following file types is CRLF 
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+
+# Isolate binary files in case the auto-detection algorithm fails and
+# marks them as text files (which could brick them).
+*.{png,jpg,jpeg,gif,webp,woff,woff2} binary
+
